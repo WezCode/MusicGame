@@ -155,8 +155,6 @@ const processSongTitleArtist = (response, albumName) => {
   getLyricsFunction(songName, artistName, albumName);
 };
 
-// getSongByID(542389, "1989");
-
 //Create an array of objects with lyric/line numbers and return it to the function that called it
 const getLyricsFunction = (songName, artist, albumName) => {
   const options = {
@@ -190,6 +188,7 @@ const processLyrics = (lyricsChunk, songName, albumName) => {
     lyricLineObjectArray.push({
       artist: artistName,
       album: albumName,
+      songName: songName,
       line: lyricArray[i],
       lineNumber: i + 1,
     });
